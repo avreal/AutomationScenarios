@@ -59,7 +59,7 @@ for i in range(totalEntries):
     elif newlist[i].keys() != newlist[i-1].keys():
         newLocation = True
 
-print("We have found",numViolationCount, "violations of the # of mac addresses policy across", numViolationLocations, "locations. The full arp output for all offending locations will be printed below")
+print("We have found violations of the # of mac addresses policy on Ethernet 0/3 across", numViolationLocations, "locations. The full arp output for all offending locations will be printed below")
 
 for i in violationList:
     print(i)

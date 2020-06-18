@@ -60,3 +60,4 @@
 2020-06-18 16:01:03,543 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['get_arp_table']} on 4 hosts
 2020-06-18 16:10:29,588 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['get_arp_table']} on 4 hosts
 2020-06-18 16:11:59,294 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['get_arp_table']} on 4 hosts
+2020-06-18 16:31:16,294 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['get_arp_table']} on 4 hosts

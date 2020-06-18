@@ -15,7 +15,7 @@ In this case, the trust network is on Ethernet 0/3. We can ignore the gateway.
 INPUT:
 
 This is sanitized output of the AggregatedResult object returned by nornir
-
+~~~
 ABC-001-0001
 {'interface': 'Ethernet0/0', 'mac': '0C:13:B8:43:CC:01', 'ip': '192.168.10.1', 'age': 218.0}
 {'interface': 'Ethernet0/0', 'mac': 'AA:BB:CC:00:01:00', 'ip': '192.168.10.2', 'age': 0.0}
@@ -49,12 +49,14 @@ ABC-001-0004
 {'interface': 'Ethernet0/1', 'mac': 'AA:BB:CC:00:03:10', 'ip': '192.168.10.14', 'age': 217.0}
 {'interface': 'Ethernet0/3', 'mac': 'AA:BB:CC:00:04:30', 'ip': '192.168.30.1', 'age': 0.0}
 {'interface': 'Ethernet0/3', 'mac': '00:50:79:66:68:03', 'ip': '192.168.30.5', 'age': 105
-
+~~~
 Output:
 
-We have found 5 violations of the # of mac addresses policy across 2 locations. The full arp output for all offending locations will be printed below
-{'ABC-001-0001': {'interface': 'Ethernet0/3', 'mac': '00:50:79:66:68:04', 'ip': '192.168.30.20', 'age': 191.0}}
-{'ABC-001-0001': {'interface': 'Ethernet0/3', 'mac': '00:50:79:66:68:00', 'ip': '192.168.30.2', 'age': 89.0}}
-{'ABC-001-0001': {'interface': 'Ethernet0/3', 'mac': '00:50:79:66:68:05', 'ip': '192.168.30.21', 'age': 136.0}}
-{'ABC-001-0002': {'interface': 'Ethernet0/3', 'mac': '00:50:79:66:68:06', 'ip': '192.168.30.50', 'age': 84.0}}
-{'ABC-001-0002': {'interface': 'Ethernet0/3', 'mac': '00:50:79:66:68:01', 'ip': '192.168.30.3', 'age': 90.0}}
+~~~
+We have found violations of the # of mac addresses policy on Ethernet 0/3 across 2 locations. The full arp output for all offending locations will be printed below
+{'ABC-001-0001': {'interface': 'Ethernet0/3', 'mac': '00:50:79:66:68:04', 'ip': '192.168.30.20', 'age': 210.0}}
+{'ABC-001-0001': {'interface': 'Ethernet0/3', 'mac': '00:50:79:66:68:00', 'ip': '192.168.30.2', 'age': 108.0}}
+{'ABC-001-0001': {'interface': 'Ethernet0/3', 'mac': '00:50:79:66:68:05', 'ip': '192.168.30.21', 'age': 155.0}}
+{'ABC-001-0002': {'interface': 'Ethernet0/3', 'mac': '00:50:79:66:68:06', 'ip': '192.168.30.50', 'age': 103.0}}
+{'ABC-001-0002': {'interface': 'Ethernet0/3', 'mac': '00:50:79:66:68:01', 'ip': '192.168.30.3', 'age': 109.0}}
+~~~

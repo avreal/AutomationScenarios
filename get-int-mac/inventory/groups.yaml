@@ -1,0 +1,21 @@
+---
+global:
+    data:
+        domain: global.local
+
+r1r2:
+    data:
+        asn: 1
+    groups:
+        - cisco_ios
+        - global
+
+r3r4:
+    data:
+        asn: 1
+    groups:
+        - cisco_ios
+        - global
+
+cisco_ios: 
+    platform: ios

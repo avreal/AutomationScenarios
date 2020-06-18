@@ -1,0 +1,31 @@
+---
+Router1:
+    hostname: 192.168.100.10
+    port: 22    
+    groups:
+        - cisco_ios
+        - r1r2
+
+Router2:
+    hostname: 192.168.100.20
+    port: 22    
+    groups:
+        - cisco_ios
+        - r1r2
+
+Router3:
+    hostname: 192.168.100.30
+    port: 22    
+    groups:
+        - cisco_ios
+        - r3r4
+
+Router4:
+    hostname: 192.168.100.40
+    port: 22    
+    groups:
+        - cisco_ios
+        - r3r4
+
+
+

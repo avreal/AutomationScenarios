@@ -1,1 +1,0 @@
-2020-06-18 11:22:13,435 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['get_arp_table']} on 4 hosts

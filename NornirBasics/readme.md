@@ -47,7 +47,7 @@ Now we have a list-like object, in order to extract data from this we can call t
 >>> 
 ~~~
 
-Now we have a standard dictionary that we can access data from by using its key(s). See below:
+Now we have a standard dictionary whose data we can access by using its key(s). See below:
 
 ~~~python
 >>> output = task_result['Router1'].result

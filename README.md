@@ -1,5 +1,10 @@
 # AutomationScenarios
+
 Network automation scenarios and use cases, some based on real world projects
+
+## NornirBasics
+
+The NornirBasics folder includes an interactive look at Nornir and its objects, no need to run any code just look at the readme.md!
 
 ## Scenario 1
 

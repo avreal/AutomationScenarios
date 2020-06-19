@@ -1,7 +1,9 @@
 todo:
 
 write output to spreadsheet by location code
+
 ~~consider case where the arp table is empty, customer must be alerted to this as well~~
+
 generate clean list of locations with violations
 
 Alan Villarreal - 2020
@@ -60,7 +62,8 @@ ABC-001-0004
 ~~~
 Output:
 
-A list containing dictionaries which make up the arp table of locations with mac address violations.
+List containing dictionaries which make up the arp table of locations with mac address violations
+List containing location codes with empty arp tables
 
 ~~~
 We have found violations of the # of mac addresses policy on Ethernet 0/3 across 2 locations. The full arp output of Ethernet 0/3 for all offending locations will be printed below

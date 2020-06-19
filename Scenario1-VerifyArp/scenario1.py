@@ -30,7 +30,6 @@ for x in result:
 
 # This function will go through the result and create a list with the violations pertaining to having more than 1 MAC on the interface
 total_entries = len(arp_list)
-num_violation_count = 0
 num_violation_locations = 0
 violation_list = []
 new_location_flag = True
@@ -40,12 +39,10 @@ for i in range(total_entries):
     elif arp_list[i].keys() == arp_list[i-1].keys() and new_location_flag == True:
         violation_list.append(arp_list[i])
         violation_list.append(arp_list[i-1])
-        num_violation_count += 2
         num_violation_locations += 1
         new_location_flag = False
     elif arp_list[i].keys() == arp_list[i-1].keys() and new_location_flag == False:
         violation_list.append(arp_list[i])
-        num_violation_count += 1
     elif arp_list[i].keys() != arp_list[i-1].keys():
         new_location_flag = True
 

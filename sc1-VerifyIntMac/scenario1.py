@@ -8,8 +8,6 @@ See readme for scenario explanation
 from nornir import InitNornir
 from nornir.plugins.tasks.networking import napalm_get
 from nornir.plugins.functions.text import print_result
-from nornir.core.filter import F
-import json
 
 nr = InitNornir(config_file="./config.yaml")
 result = nr.run(task=napalm_get,getters=["get_arp_table"])
@@ -55,7 +53,7 @@ print("We have found violations of the # of mac addresses policy on Ethernet 0/3
 for i in violation_list:
     print(i)
 
-print("\nThe following locations have an empty arp table on Ethernet 0/3, indicating that there may be nothing plugged into the trust network, or whatever is on the trust network is not replying to ARP")
+print("\nThe following locations have an empty arp table on Ethernet 0/3, indicating that there may be nothing plugged into the trust network, or whatever is on the trust network is not replying to ARP\n")
 for i in empty_arp_list:
     print(i)
 

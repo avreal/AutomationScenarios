@@ -63,6 +63,7 @@ ABC-001-0004
 Output:
 
 List containing dictionaries which make up the arp table of locations with mac address violations
+
 List containing location codes with empty arp tables
 
 ~~~

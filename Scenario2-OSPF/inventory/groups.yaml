@@ -1,0 +1,6 @@
+---
+global:
+    data:
+        domain: global.local
+cisco_ios: 
+    platform: ios

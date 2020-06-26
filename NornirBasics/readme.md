@@ -25,6 +25,24 @@ nornir.core.task.AggregatedResult
 >>>
 ~~~
 
+We will mostly be working with the AggregatedResult object, but I will quickly note that there are some useful methods on the nornir.core.Nornir object. I definitely recommend exploring these methods while experimenting with Nornir.
+
+~~~
+>>> type(nr.inventory)
+<class 'nornir.core.inventory.Inventory'>
+
+>>> dir(nr.inventory)
+['__class__', '__delattr__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__le__', '__len__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__slots__', '__str__', '__subclasshook__', '_update_group_refs', 'add_group', 'add_host', 'children_of_group', 'defaults', 'dict', 'filter', 'get_defaults_dict', 'get_groups_dict', 'get_hosts_dict', 'get_inventory_dict', 'groups', 'hosts']
+>>> 
+
+>>> nr.inventory.hosts
+{'Router1': Host: Router1, 'Router2': Host: Router2, 'Router3': Host: Router3, 'Router4': Host: Router4}
+
+>>> nr.inventory.get_inventory_dict()
+{'hosts': {'Router1': {'hostname': '192.168.100.10', 'port': 22, 'username': None, 'password': None, 'platform': None, 'groups': ['cisco_ios', 'r1r2'], 'data': {}, 'connection_options': {}}, 'Router2': {'hostname': '192.168.100.20', 'port': 22, 'username': None, 'password': None, 'platform': None, 'groups': ['cisco_ios', 'r1r2'], 'data': {}, 'connection_options': {}}, 'Router3': {'hostname': '192.168.100.30', 'port': 22, 'username': None, 'password': None, 'platform': None, 'groups': ['cisco_ios', 'r3r4'], 'data': {}, 'connection_options': {}}, 'Router4': {'hostname': '192.168.100.40', 'port': 22, 'username': None, 'password': None, 'platform': None, 'groups': ['cisco_ios', 'r3r4'], 'data': {}, 'connection_options': {}}}, 'groups': {'global': {'hostname': None, 'port': None, 'username': None, 'password': None, 'platform': None, 'groups': [], 'data': {'domain': 'global.local'}, 'connection_options': {}}, 'r1r2': {'hostname': None, 'port': None, 'username': None, 'password': None, 'platform': None, 'groups': ['cisco_ios', 'global'], 'data': {'asn': 1}, 'connection_options': {}}, 'r3r4': {'hostname': None, 'port': None, 'username': None, 'password': None, 'platform': None, 'groups': ['cisco_ios', 'global'], 'data': {'asn': 1}, 'connection_options': {}}, 'cisco_ios': {'hostname': None, 'port': None, 'username': None, 'password': None, 'platform': 'ios', 'groups': [], 'data': {}, 'connection_options': {}}}, 'defaults': {'hostname': None, 'port': None, 'username': 'admin', 'password': 'admin', 'platform': None, 'data': {}, 'connection_options': {}}}
+>>> 
+~~~
+
 Suppose we wish to grab certain keys/values from this output for a particular device, we can dig further into the AggregatedResult object that was returned from nr.run. First lets do a normal print(task_result)
 
 ~~~python

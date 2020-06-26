@@ -1,0 +1,30 @@
+---
+Router6:
+    hostname: 192.168.46.1
+    port: 22
+    groups:
+        - cisco_ios
+Router1:
+    hostname: 192.168.16.2
+    groups:
+        - cisco_ios
+Router4:
+    hostname: 192.168.46.2
+    port: 22
+    groups:
+        - cisco_ios
+Router3:
+    hostname: 192.168.13.2
+    port: 22
+    groups:
+        - cisco_ios
+Router2:
+    hostname: 192.168.12.2
+    port: 22
+    groups:
+        - cisco_ios
+Router5:
+    hostname: 192.168.45.2
+    port: 22
+    groups:
+        - cisco_ios

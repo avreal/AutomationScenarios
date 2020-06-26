@@ -1,0 +1,8 @@
+Network Automation Lab
+sudo ip route add 192.168.100.0/24 via 192.168.122.150
+sudo ip route add 192.168.10.0/24 via 192.168.122.150
+
+OSPF Loop Lab
+sudo ip route add 192.168.0.0/18 via 192.168.122.100
+
+
